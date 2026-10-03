@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: "${container_name}"
     restart: unless-stopped
+    labels:
+      - "lazytainer.group=melodyhue-backend"
     environment:
       SECRET_KEY: "${SECRET_KEY}"
       ENABLE_CORS: "${ENABLE_CORS:-true}"
